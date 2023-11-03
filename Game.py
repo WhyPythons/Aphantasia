@@ -1,5 +1,5 @@
 import random
-def CharacterCreation(race='', name='Adam'):
+def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
     while True:
@@ -52,22 +52,24 @@ def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health
     return name, race, level, exp, expthresh, health, mana, strength, intelligence, wisdom, constitution, agility
 
 def GenerateCharacter():
-    playeratt = GenerateCharAttributes()
-    player = {
-    "name": playeratt[0],
-    "race": playeratt[1],
-    "level": playeratt[2],
-    "exp": playeratt[3] ,
-    "expthresh": playeratt[4],
-    "health": playeratt[5], 
-    "mana": playeratt[6], 
-    "strength": playeratt[7], 
-    "intelligence": playeratt[8], 
-    "wisdom": playeratt[9],
-    "constitution": playeratt[10],
-    "agility": playeratt[11]}
-    return player
+    charattr = GenerateCharAttributes()
+    character = {
+    "name": charattr[0],
+    "race": charattr[1],
+    "level": charattr[2],
+    "exp": charattr[3] ,
+    "expthresh": charattr[4],
+    "health": charattr[5], 
+    "mana": charattr[6], 
+    "strength": charattr[7], 
+    "intelligence": charattr[8], 
+    "wisdom": charattr[9],
+    "constitution": charattr[10],
+    "agility": charattr[11]}
+    return character
 
+#Change these names to char/character
+Player = GenerateCharacter()
 def CharSheet():
     print("[CHARACTER SHEET]")
     print(f"Name: {Player['name']}")
