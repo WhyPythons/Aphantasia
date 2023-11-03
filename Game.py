@@ -1,31 +1,84 @@
 import random
-def GenerateLevel(level=0, exp=0, expthresh=0):
-  level = 1
-  exp = 0
-  expthresh = 20
-  return level, exp, expthresh
-def GenerateStats(health=0, strength=0, intelligence=0, constitution=0, agility=0):
-  health = random.randint(10,20) #Unsure if this should be fixed or random or if it should be in this function at all.
-  strength = random.randint(1,10)
-  intelligence = random.randint(1,10)
-  constitution = random.randint(1,10)
-  agility = random.randint(1,10)
-  return health, strength, intelligence, constitution, agility
-def GeneratePlayer():
-    stats = GenerateStats()
-    level = GenerateLevel()
+def CharacterCreation(race='', name='Adam'):
+    print("Welcome to [TEMP NAME]")
+    print("Character Creation start!")
+    while True:
+        name = input('Enter a name:')
+        sure = input('Are you sure? (y/n) ')
+        if sure == 'y':
+            break
+    while race != 'Human' or race != 'Orc' or race != 'Elf':
+        print('Human:')
+        print('Balanced stats. Basic skill tree')
+        print('Orc:')
+        print('Higher physical stats, lower mental stats. Special skill tree')
+        print('Elf:')
+        print('Higher mental stats, lower physical stats. Special skill tree')
+        race = input('Choose:').lower()
+        if race == 'human' or race == 'orc' or race == 'elf':
+            return name, race
+        else:
+            print()
+            print('Invalid choice, please try again.')
+            print()
+
+def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
+    name, race = CharacterCreation()
+    level = 1
+    expthresh = 20 #Temp
+    strength = random.randint(3,10)
+    intelligence = random.randint(3,10)
+    wisdom = random.randint(3,10)
+    constitution = random.randint(3,10)
+    agility = random.randint(3,10)
+    health = int(constitution * 1.5 + 10)
+    mana = int(wisdom * 1.5 + 5)
+    if race == "orc":
+        strength = random.randint(5,12)
+        intelligence = random.randint(2,8)
+        wisdom = random.randint(2,8)
+        constitution = random.randint(5,12)
+        agility = random.randint(5,12)
+        health = int(constitution * 1.8 + 15)
+        mana = int(wisdom * 1.2 + 3)
+    elif race == "elf":
+        strength = random.randint(2,8)
+        intelligence = random.randint(5,12)
+        wisdom = random.randint(5,12)
+        constitution = random.randint(2,8)
+        agility = random.randint(2,8)
+        health = int(constitution * 1.2 + 6)
+        mana = int(wisdom * 1.8 + 10)
+    return name, race, level, exp, expthresh, health, mana, strength, intelligence, wisdom, constitution, agility
+
+def GenerateCharacter():
+    playeratt = GenerateCharAttributes()
     player = {
-    "health": stats[0], 
-    "strength": stats[1], 
-    "intelligence": stats[2], 
-    "constitution": stats[3], 
-    "agility": stats[4],
-    "level": level[0],
-    "exp": level[1],
-    "expthresh": level[2]}
+    "name": playeratt[0],
+    "race": playeratt[1],
+    "level": playeratt[2],
+    "exp": playeratt[3] ,
+    "expthresh": playeratt[4],
+    "health": playeratt[5], 
+    "mana": playeratt[6], 
+    "strength": playeratt[7], 
+    "intelligence": playeratt[8], 
+    "wisdom": playeratt[9],
+    "constitution": playeratt[10],
+    "agility": playeratt[11]}
     return player
-Player = GeneratePlayer()
-print(Player)
+
 def CharSheet():
-    print(f"health: {Player['level']}")
-#To be continued
+    print("[CHARACTER SHEET]")
+    print(f"Name: {Player['name']}")
+    print(f"Race: {Player['race']}")
+    print(f"Level: {Player['level']}")
+    print(f"Exp: {Player['exp']}/{Player['expthresh']}")
+    print(f"Health: {Player['health']}")
+    print(f"Mana: {Player['mana']}")
+    print("Stats:")
+    print(f"Strength: {Player['strength']}")
+    print(f"Intelligence: {Player['intelligence']}")
+    print(f"Wisdom: {Player['wisdom']}")
+    print(f"Constitution: {Player['constitution']}")
+    print(f"Agility: {Player['agility']}")
