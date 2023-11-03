@@ -84,7 +84,8 @@ def CharSheet():
     print(f"Wisdom: {Player['wisdom']}")
     print(f"Constitution: {Player['constitution']}")
     print(f"Agility: {Player['agility']}")
-    
+#Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
+
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
 #Strength-Physical attack damage 
