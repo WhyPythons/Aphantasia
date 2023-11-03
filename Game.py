@@ -84,3 +84,11 @@ def CharSheet():
     print(f"Wisdom: {Player['wisdom']}")
     print(f"Constitution: {Player['constitution']}")
     print(f"Agility: {Player['agility']}")
+    
+#Stat explantion:
+#Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
+#Strength-Physical attack damage 
+#Intelligence-Magical attack damage
+#Wisdom-Calculates your total mana and your mana regen
+#Constituiton-Calculates your total health and your health regen
+#Agility-Not yet decided but, probably priority in fights or dodge chance, or maybe both.
