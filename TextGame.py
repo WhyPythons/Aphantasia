@@ -992,5 +992,6 @@ while True:
         #So much for that i guess, for sure when i'm done with whatever it is im doing.
         #Lol i finished whatever it was i was doing and i still haven't done it, maybe when i finish with debugs, and combat is polished and checked and npcs are finished.
         #Basically it will happen maybe, when the game is almost finished
-        #Ha a week+ later and still haven't got to it. Honestly i could, but im lazzzy
+        #Ha a week+ later and still haven't got to it. Honestly i could, but im lazy
+        #Months later, added to git and still haven't gotten to it. poor game.
     continue
