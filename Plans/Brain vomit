@@ -1,0 +1,11 @@
+Combat:
+Add menu
+[Attack]
+[Skills]
+[Bag]
+[Run]
+This is game is gonna have a focus on combat so, building my mechanics around a combat menu seems like a good idea.
+So first things first [Bag] or items really, the most important part of this game is gonna be skills and items, with items being
+number one on the totem pole. 
+So first i have to make a equip/unequip system, an inventory, equip slots, the items themselves, which i will have be randomly generated
+like damage and name and all that, within the level range of course.
