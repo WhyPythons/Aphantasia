@@ -1,5 +1,5 @@
 import random
-from colorama import Fore
+from Colors import color
 def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
@@ -62,10 +62,10 @@ def GenerateCharacter():
     "level": charattr[2],
     "exp": charattr[3] ,
     "expthresh": charattr[4],
-    "health": charattr[5], 
-    "mana": charattr[6], 
-    "strength": charattr[7], 
-    "intelligence": charattr[8], 
+    "health": charattr[5],
+    "mana": charattr[6],
+    "strength": charattr[7],
+    "intelligence": charattr[8],
     "wisdom": charattr[9],
     "constitution": charattr[10],
     "agility": charattr[11]}
@@ -73,11 +73,11 @@ def GenerateCharacter():
 
 #Change these names to char/character
 Player = GenerateCharacter()
+
 #Set up different colors for each stat, red for strength light blue for intel, orange for const, purple for wisdom and green for agil
 #The above is not set in stone, just ideas.
 def CharSheet():
-    print(Fore.BLUE + "[CHARACTER SHEET]")
-    print(Fore.RESET, end='')
+    print(color.BLUE, "[CHARACTER SHEET]", color.END, sep='')
     print(f"Name: {Player['name']}")
     print(f"Race: {Player['race']}")
     print(f"Level: {Player['level']}")
@@ -91,10 +91,10 @@ def CharSheet():
     print(f"Constitution: {Player['constitution']}")
     print(f"Agility: {Player['agility']}")
 #Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
-
+    
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
-#Strength-Physical attack damage 
+#Strength-Physical attack damage
 #Intelligence-Magical attack damage
 #Wisdom-Calculates your total mana and your mana regen
 #Constituiton-Calculates your total health and your health regen
