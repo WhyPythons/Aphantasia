@@ -1,4 +1,5 @@
 import random
+from colorama import Fore
 def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
@@ -8,6 +9,7 @@ def CharacterCreation(race='', name=''):
         if sure == 'y':
             break
     while race != 'Human' or race != 'Orc' or race != 'Elf':
+        #Set up colors for each race name.
         print('Human:')
         print('Balanced stats. Basic skill tree unlocked')
         print('Orc:')
@@ -71,8 +73,11 @@ def GenerateCharacter():
 
 #Change these names to char/character
 Player = GenerateCharacter()
+#Set up different colors for each stat, red for strength light blue for intel, orange for const, purple for wisdom and green for agil
+#The above is not set in stone, just ideas.
 def CharSheet():
-    print("[CHARACTER SHEET]")
+    print(Fore.BLUE + "[CHARACTER SHEET]")
+    print(Fore.RESET, end='')
     print(f"Name: {Player['name']}")
     print(f"Race: {Player['race']}")
     print(f"Level: {Player['level']}")
