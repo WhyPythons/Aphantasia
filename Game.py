@@ -9,11 +9,11 @@ def CharacterCreation(race='', name=''):
             break
     while race != 'Human' or race != 'Orc' or race != 'Elf':
         print('Human:')
-        print('Balanced stats. Basic skill tree')
+        print('Balanced stats. Basic skill tree unlocked')
         print('Orc:')
-        print('Higher physical stats, lower mental stats. Special skill tree')
+        print('Higher physical stats, lower mental stats. Special skill tree unlocked')
         print('Elf:')
-        print('Higher mental stats, lower physical stats. Special skill tree')
+        print('Higher mental stats, lower physical stats. Special skill tree unlocked')
         race = input('Choose:').lower()
         if race == 'human' or race == 'orc' or race == 'elf':
             return name, race
@@ -24,15 +24,16 @@ def CharacterCreation(race='', name=''):
 
 def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
     name, race = CharacterCreation()
-    level = 1
-    expthresh = 20 #Temp
-    strength = random.randint(3,10)
-    intelligence = random.randint(3,10)
-    wisdom = random.randint(3,10)
-    constitution = random.randint(3,10)
-    agility = random.randint(3,10)
-    health = int(constitution * 1.5 + 10)
-    mana = int(wisdom * 1.5 + 5)
+    if race == "human":
+        level = 1
+        expthresh = 20 #Temporary expthreshold
+        strength = random.randint(3,10)
+        intelligence = random.randint(3,10)
+        wisdom = random.randint(3,10)
+        constitution = random.randint(3,10)
+        agility = random.randint(3,10)
+        health = int(constitution * 1.5 + 10)
+        mana = int(wisdom * 1.5 + 5)
     if race == "orc":
         strength = random.randint(5,12)
         intelligence = random.randint(2,8)
