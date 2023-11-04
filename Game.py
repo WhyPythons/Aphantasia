@@ -34,7 +34,7 @@ def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health
         agility = random.randint(3,10)
         health = int(constitution * 1.5 + 10)
         mana = int(wisdom * 1.5 + 5)
-    if race == "orc":
+    elif race == "orc":
         strength = random.randint(5,12)
         intelligence = random.randint(2,8)
         wisdom = random.randint(2,8)
