@@ -1,6 +1,7 @@
 import random, ruamel.yaml, sys
 from Colors import color
 
+
 def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
@@ -12,11 +13,11 @@ def CharacterCreation(race='', name=''):
     while race != 'Human' or race != 'Orc' or race != 'Elf':
         #Set up colors for each race name.
         print('Human:')
-        print('Balanced stats. Basic skill tree unlocked')
+        print('Balanced stats.')
         print('Orc:')
-        print('Higher physical stats, lower mental stats. Special skill tree unlocked')
+        print('Higher physical stats, lower mental stats.')
         print('Elf:')
-        print('Higher mental stats, lower physical stats. Special skill tree unlocked')
+        print('Higher mental stats, lower physical stats.')
         race = input('Choose:').lower()
         if race == 'human' or race == 'orc' or race == 'elf':
             return name, race
@@ -90,9 +91,10 @@ def Equipment():
     return formatted
 
 def Inventory():
-    print()
+    return 0
 
-#def Skills()
+def Skills():
+    return 0
 
 def CharSheet():
     print(color.BLUE, "[CHARACTER SHEET]", color.END, sep='')
@@ -109,11 +111,23 @@ def CharSheet():
     print(f"Wisdom: {Character['wisdom']}")
     print(f"Constitution: {Character['constitution']}")
     print(f"Agility: {Character['agility']}")
-    print("Equipped Items:")
-    print(Equipment())
-CharSheet()
+
+def Menu():
+    while True:
+        options = input("Stats, Equipment, Inventory, Skills:").lower()
+        if options == "stats" or options == 'st':
+            CharSheet()
+        elif options == "equipment" or options == 'eq':
+            Equipment()
+        elif options == 'skills' or options == 'sk':
+            Skills()
+        elif options == 'inventory' or options == 'in':
+            Inventory()
+Menu()
+
 
 #Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
+
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
 #Strength-Physical attack damage
