@@ -9,3 +9,28 @@ So first things first [Bag] or items really, the most important part of this gam
 number one on the totem pole. 
 So first i have to make a equip/unequip system, an inventory, equip slots, the items themselves, which i will have be randomly generated
 like damage and name and all that, within the level range of course.
+To do items, i first have to do enemies, because who's supposed to drop the items!? the sky? no, the enemies. and to do enemies
+
+i need areas or levels or floors, or whatever the fuck you wanna call them, basically what decides the enemy level, drops, etc 
+
+to expand on the area = drops bits, i could have a generator for each area, so i could probably do something like if area == this
+pick from these lists and this min and max damage and generate an item.
+
+now if i went for a dungeon type deal with floors and all that, i could do the above but for each floor, with each floor being harder
+and therefore better items.
+
+now i would say have different drops for each monster, but, im not entirely sure i want to do that, its sounds like a better idea though.
+nothing is set in stone. but i do like the idea of each monster having their own drops.
+
+I still don't have a great idea on how monsters are gonna work, so all this is just gonna stay vomit. for now.
+
+sounds good.
+
+
+1.now i could make it kinda of an incremental thing, where you first fight a weak monster, then slowly level up and fight stronger monsters
+
+now that i read 1. again i see that it makes zero sense, but this is brain vomit so.
+
+but thats kinda boring, no SUBSTANCE, when you fight a monster you wanna imagine where you are, a dungeon! oo or maybe an underground monument.
+basically area's will do all the work for me, well not really but ya get the point.
+
