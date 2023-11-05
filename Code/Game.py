@@ -25,7 +25,7 @@ def CharacterCreation(race='', name=''):
             print('Invalid choice, please try again.')
             print()
 
-def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
+def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, gold=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
     name, race = CharacterCreation()
     level = 1
     expthresh = 20  # Temporary expthreshold
@@ -53,7 +53,7 @@ def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health
         agility = random.randint(2,8)
         health = int(constitution * 1.2 + 6)
         mana = int(wisdom * 1.8 + 10)
-    return name, race, level, exp, expthresh, health, mana, strength, intelligence, wisdom, constitution, agility
+    return name, race, level, exp, expthresh, health, mana, gold, strength, intelligence, wisdom, constitution, agility
 
 def GenerateCharacter():
     charattr = GenerateCharAttributes()
@@ -65,11 +65,12 @@ def GenerateCharacter():
     "expthresh": charattr[4],
     "health": charattr[5],
     "mana": charattr[6],
-    "strength": charattr[7],
-    "intelligence": charattr[8],
-    "wisdom": charattr[9],
-    "constitution": charattr[10],
-    "agility": charattr[11]}
+    "gold": charattr[7],
+    "strength": charattr[8],
+    "intelligence": charattr[9],
+    "wisdom": charattr[10],
+    "constitution": charattr[11],
+    "agility": charattr[12]}
     return character
 
 Character = GenerateCharacter()
@@ -77,7 +78,6 @@ Character = GenerateCharacter()
 #Set up different colors for each stat, red for strength light blue for intel, orange for const, purple for wisdom and green for agil
 #The above is not set in stone, just ideas.
 
-#Add default gear
 def Equipment():
     #All of them are just 1 for each
     equipment = {
@@ -89,11 +89,10 @@ def Equipment():
     formatted = yaml.dump(equipment, sys.stdout)
     return formatted
 
-#def Inventory():
-    #print()
+def Inventory():
+    print()
 
-#def Skills():
-    #print()
+#def Skills()
 
 def CharSheet():
     print(color.BLUE, "[CHARACTER SHEET]", color.END, sep='')
@@ -103,6 +102,7 @@ def CharSheet():
     print(f"Exp: {Character['exp']}/{Character['expthresh']}")
     print(f"Health: {Character['health']}")
     print(f"Mana: {Character['mana']}")
+    print(f"Gold: {Character['gold']}")
     print("Stats:")
     print(f"Strength: {Character['strength']}")
     print(f"Intelligence: {Character['intelligence']}")
@@ -114,7 +114,6 @@ def CharSheet():
 CharSheet()
 
 #Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
-
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
 #Strength-Physical attack damage
@@ -122,7 +121,6 @@ CharSheet()
 #Wisdom-Calculates your total mana and your mana regen
 #Constituiton-Calculates your total health and your health regen
 #Agility-Not yet decided but, probably priority in fights or dodge chance, or maybe both.
-
 #The below is for when equipping is a thing.
 """for outer, inner in armor.items():
         x = len(inner)
