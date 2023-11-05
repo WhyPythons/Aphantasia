@@ -27,7 +27,25 @@ nothing is set in stone. but i do like the idea of each monster having their own
 
 I still don't have a great idea on how monsters are gonna work, so all this is just gonna stay vomit. for now.
 
+before dungeons, there needs to be a hub, a village. with shops, npcs and GOLD, then items, for shops, then dungeons,
+yeah, so with the hub i can set up item logic, then for the dungeons i can have like 4 and you have to beat 1 dungeon, to advance to the next one.
+until you defeat all the dungeons and win the game.
+monsters would give gold and or selling stuff
+
+So short term plan of action:
+1.Hub/Village
+2.Gold
+3.Shops
+4.Item logic
+
 sounds good.
+
+Hidden/dev/whatever variables, stuff like Equipment damage, which is basically the sum of all your weapon damage, just so i can simplify the damage
+calculation.
+
+Hidden stats: Defence? maybe constitution should stay as defence? i don't know.
+
+
 
 1.now i could make it kinda of an incremental thing, where you first fight a weak monster, then slowly level up and fight stronger monsters
 
