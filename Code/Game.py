@@ -1,5 +1,6 @@
-import random
+import random, ruamel.yaml, sys
 from Colors import color
+
 def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
@@ -26,9 +27,9 @@ def CharacterCreation(race='', name=''):
 
 def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
     name, race = CharacterCreation()
+    level = 1
+    expthresh = 20  # Temporary expthreshold
     if race == "human":
-        level = 1
-        expthresh = 20 #Temporary expthreshold
         strength = random.randint(3,10)
         intelligence = random.randint(3,10)
         wisdom = random.randint(3,10)
@@ -71,27 +72,48 @@ def GenerateCharacter():
     "agility": charattr[11]}
     return character
 
-#Change these names to char/character
-Player = GenerateCharacter()
+Character = GenerateCharacter()
 
 #Set up different colors for each stat, red for strength light blue for intel, orange for const, purple for wisdom and green for agil
 #The above is not set in stone, just ideas.
+
+def Equipment():
+    #All of them are just 1 for each
+    equipment = {
+    "Armor": {"Head": {}, "Torso": {}, "Arms": {}, "Legs": {}, "Feet": {}},
+    "Weapons": {"MainHand": {}, "OffHand": {}},
+    "Accessories":{"Neck": {}, "Hands": {}}
+    }
+    yaml = ruamel.yaml.YAML()
+    formatted = yaml.dump(equipment, sys.stdout)
+    return formatted
+
+#def Inventory():
+    #print()
+
+#def Skills():
+    #print()
+
 def CharSheet():
     print(color.BLUE, "[CHARACTER SHEET]", color.END, sep='')
-    print(f"Name: {Player['name']}")
-    print(f"Race: {Player['race']}")
-    print(f"Level: {Player['level']}")
-    print(f"Exp: {Player['exp']}/{Player['expthresh']}")
-    print(f"Health: {Player['health']}")
-    print(f"Mana: {Player['mana']}")
+    print(f"Name: {Character['name']}")
+    print(f"Race: {Character['race']}")
+    print(f"Level: {Character['level']}")
+    print(f"Exp: {Character['exp']}/{Character['expthresh']}")
+    print(f"Health: {Character['health']}")
+    print(f"Mana: {Character['mana']}")
     print("Stats:")
-    print(f"Strength: {Player['strength']}")
-    print(f"Intelligence: {Player['intelligence']}")
-    print(f"Wisdom: {Player['wisdom']}")
-    print(f"Constitution: {Player['constitution']}")
-    print(f"Agility: {Player['agility']}")
+    print(f"Strength: {Character['strength']}")
+    print(f"Intelligence: {Character['intelligence']}")
+    print(f"Wisdom: {Character['wisdom']}")
+    print(f"Constitution: {Character['constitution']}")
+    print(f"Agility: {Character['agility']}")
+    print("Equipped Items:")
+    print(Equipment())
+CharSheet()
+
 #Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
-    
+
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
 #Strength-Physical attack damage
@@ -99,3 +121,9 @@ def CharSheet():
 #Wisdom-Calculates your total mana and your mana regen
 #Constituiton-Calculates your total health and your health regen
 #Agility-Not yet decided but, probably priority in fights or dodge chance, or maybe both.
+
+#The below is for when equipping is a thing.
+"""for outer, inner in armor.items():
+        x = len(inner)
+        if x > 1:
+            print("no!")"""
