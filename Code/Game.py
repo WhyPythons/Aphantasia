@@ -77,6 +77,7 @@ Character = GenerateCharacter()
 #Set up different colors for each stat, red for strength light blue for intel, orange for const, purple for wisdom and green for agil
 #The above is not set in stone, just ideas.
 
+#Add default gear
 def Equipment():
     #All of them are just 1 for each
     equipment = {
