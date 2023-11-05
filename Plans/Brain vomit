@@ -29,7 +29,6 @@ I still don't have a great idea on how monsters are gonna work, so all this is j
 
 sounds good.
 
-
 1.now i could make it kinda of an incremental thing, where you first fight a weak monster, then slowly level up and fight stronger monsters
 
 now that i read 1. again i see that it makes zero sense, but this is brain vomit so.
@@ -37,3 +36,8 @@ now that i read 1. again i see that it makes zero sense, but this is brain vomit
 but thats kinda boring, no SUBSTANCE, when you fight a monster you wanna imagine where you are, a dungeon! oo or maybe an underground monument.
 basically area's will do all the work for me, well not really but ya get the point.
 
+KEYBOARD INPUT MENU
+IMPORT KEYBOARD
+GET KEYBOARD INPUT can do both text input and keyboard input :)
+
+MENU FOR CHARACTER STUFF, REMEMBER
