@@ -131,6 +131,9 @@ def Menu():
             Skills()
         elif options == 'inventory' or options == 'in':
             Inventory()
+        elif options == 'exit' or options 'leave':
+            print('Exiting menu')
+            break
 Menu()
 
 
