@@ -15,6 +15,8 @@
 4.2 Skill points: Planned
 
 Classes should probably be done before fights.
+Ah and for clarification, the decimals are steps to achieve the goal they are under.
+So for example: 10. Eat, 10.1 Pick it up, 10.2 bring it closer to your mouth, etc.
 
 2.: A hub where you can buy stuff
 2.1: 1 blacksmith, 1 general store, 1 jewlery store, maybe more
@@ -23,7 +25,9 @@ Classes should probably be done before fights.
 
 3.: 4 Dungeons, 
 3.1: 5 floors for the first, 10 for the second, 15 for the third, 20 for the final one
-3.2: Each one will have its own loot pool, unsure about everything else
+3.2: Each one will have its own loot pool, unsure about everything else, I feel like OOP would be perfect for this. 
+so im heavily leaning towards doing that for monsters.
+I also am thinking of monsters having same stats, equipment buffs, etc. but no level&exp, maybe something like rank instead.
 3.3: Stronger monster, appears on the final floor of a dungeon.
 3.4: I have no idea.
 
