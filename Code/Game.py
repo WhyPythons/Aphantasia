@@ -1,6 +1,7 @@
 import random, ruamel.yaml, sys
 from Colors import color
 
+
 def CharacterCreation(race='', name=''):
     print("Welcome to [TEMP NAME]")
     print("Character Creation start!")
@@ -12,11 +13,11 @@ def CharacterCreation(race='', name=''):
     while race != 'Human' or race != 'Orc' or race != 'Elf':
         #Set up colors for each race name.
         print('Human:')
-        print('Balanced stats. Basic skill tree unlocked')
+        print('Balanced stats.')
         print('Orc:')
-        print('Higher physical stats, lower mental stats. Special skill tree unlocked')
+        print('Higher physical stats, lower mental stats.')
         print('Elf:')
-        print('Higher mental stats, lower physical stats. Special skill tree unlocked')
+        print('Higher mental stats, lower physical stats.')
         race = input('Choose:').lower()
         if race == 'human' or race == 'orc' or race == 'elf':
             return name, race
@@ -25,35 +26,41 @@ def CharacterCreation(race='', name=''):
             print('Invalid choice, please try again.')
             print()
 
-def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, mana=0, gold=0, strength=0, intelligence=0, wisdom=0, constitution=0, agility=0):
+def GenerateCharAttributes(race='', name='', level=0, exp=0, expthresh=0, health=0, maxhealth=0, mana=0, maxmana=0, gold=0, strength=0, intelligence=0, wisdom=0, constitution=0, dexterity=0):
     name, race = CharacterCreation()
     level = 1
-    expthresh = 20  # Temporary expthreshold
+    expthresh = 20  # Temporary expthreshold, Well yes because it will go up every level up, but i mean temp in the other way.
     if race == "human":
         strength = random.randint(3,10)
         intelligence = random.randint(3,10)
         wisdom = random.randint(3,10)
         constitution = random.randint(3,10)
-        agility = random.randint(3,10)
+        dexterity = random.randint(3,10)
         health = int(constitution * 1.5 + 10)
+        maxhealth = health
         mana = int(wisdom * 1.5 + 5)
+        maxmana = mana
     elif race == "orc":
         strength = random.randint(5,12)
         intelligence = random.randint(2,8)
         wisdom = random.randint(2,8)
         constitution = random.randint(5,12)
-        agility = random.randint(5,12)
+        dexterity = random.randint(5,12)
         health = int(constitution * 1.8 + 15)
+        maxhealth = health
         mana = int(wisdom * 1.2 + 3)
+        maxmana = mana
     elif race == "elf":
         strength = random.randint(2,8)
         intelligence = random.randint(5,12)
         wisdom = random.randint(5,12)
         constitution = random.randint(2,8)
-        agility = random.randint(2,8)
+        dexterity = random.randint(2,8)
         health = int(constitution * 1.2 + 6)
+        maxhealth = health
         mana = int(wisdom * 1.8 + 10)
-    return name, race, level, exp, expthresh, health, mana, gold, strength, intelligence, wisdom, constitution, agility
+        maxmana = mana
+    return name, race, level, exp, expthresh, health, maxhealth, mana, maxmana, gold, strength, intelligence, wisdom, constitution, dexterity
 
 def GenerateCharacter():
     charattr = GenerateCharAttributes()
@@ -64,13 +71,15 @@ def GenerateCharacter():
     "exp": charattr[3] ,
     "expthresh": charattr[4],
     "health": charattr[5],
-    "mana": charattr[6],
-    "gold": charattr[7],
-    "strength": charattr[8],
-    "intelligence": charattr[9],
-    "wisdom": charattr[10],
-    "constitution": charattr[11],
-    "agility": charattr[12]}
+    "maxhealth": charattr[6],
+    "mana": charattr[7],
+    "maxmana": charattr[8],
+    "gold": charattr[9],
+    "strength": charattr[10],
+    "intelligence": charattr[11],
+    "wisdom": charattr[12],
+    "constitution": charattr[13],
+    "dexterity": charattr[14]}
     return character
 
 Character = GenerateCharacter()
@@ -90,9 +99,10 @@ def Equipment():
     return formatted
 
 def Inventory():
-    print()
+    return 0
 
-#def Skills()
+def Skills():
+    return 0
 
 def CharSheet():
     print(color.BLUE, "[CHARACTER SHEET]", color.END, sep='')
@@ -100,20 +110,35 @@ def CharSheet():
     print(f"Race: {Character['race']}")
     print(f"Level: {Character['level']}")
     print(f"Exp: {Character['exp']}/{Character['expthresh']}")
-    print(f"Health: {Character['health']}")
-    print(f"Mana: {Character['mana']}")
+    print(f"Health: {Character['health']}/{Character['maxhealth']}")
+    print(f"Mana: {Character['mana']}/{Character['maxmana']}")
     print(f"Gold: {Character['gold']}")
     print("Stats:")
     print(f"Strength: {Character['strength']}")
     print(f"Intelligence: {Character['intelligence']}")
     print(f"Wisdom: {Character['wisdom']}")
     print(f"Constitution: {Character['constitution']}")
-    print(f"Agility: {Character['agility']}")
-    print("Equipped Items:")
-    print(Equipment())
-CharSheet()
+    print(f"Dexterity: {Character['dexterity']}")
+
+def Menu():
+    while True:
+        options = input("Stats, Equipment, Inventory, Skills:").lower()
+        if options == "stats" or options == 'st':
+            CharSheet()
+        elif options == "equipment" or options == 'eq':
+            Equipment()
+        elif options == 'skills' or options == 'sk':
+            Skills()
+        elif options == 'inventory' or options == 'in':
+            Inventory()
+        elif options == 'exit' or options == 'leave':
+            print('Exiting menu')
+            break
+Menu()
+
 
 #Next up is description of the character in the sheet, and whatever else that needs to be fleshed out more.
+
 #Stat explantion:
 #Assume all of these will have "narrative" consequences(By that i mean things like quest reqs or whatever)
 #Strength-Physical attack damage

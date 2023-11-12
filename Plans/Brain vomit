@@ -62,3 +62,13 @@ Menu for the character stuff
 
 Classes for the player at level 5. almost forgot about classes.
 
+Now stat growth, a question older than this project.
+How is it going to work, player assigned or automatically assigned or both,
+now my idea for automatically assigned is pretty much the same as my last game, 
+but instead of main-stat second-stat etc, Its split into physical and mental stats, and depending on your race your stats go up a certain amount
+so if you picked human, all your stats would go up a random amount between 1-3
+if you picked orc, physical is 2-4 and mental is 1-2
+if you picked elf, mental is 2-4 and physical is 1-2
+Assigned is what it says on the tin.
+now both, i could do something like what i described with the auto and give you 1-3 extra points to assign every level
+i actually quite like the both idea, so thats the game plan for now.
