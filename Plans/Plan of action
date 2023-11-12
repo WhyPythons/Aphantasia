@@ -7,7 +7,7 @@ So for example: 10. Eat, 10.1 Pick it up, 10.2 bring it closer to your mouth, et
 2.2 Items: Planned
 2.3 Npcs: Planned
 3 Dungeons: Planned
-3.1 Floors: Planned
+3.1 Floors&Rooms: Planned
 3.2 Monsters: Planned
 3.3 BossMonsters: Planned
 3.4: Fights
@@ -19,20 +19,32 @@ So for example: 10. Eat, 10.1 Pick it up, 10.2 bring it closer to your mouth, et
 
 2.: A hub where you can buy stuff
 2.1: 1 blacksmith, 1 general store, 1 jewlery store, maybe more
-2.2: What it says on the tin
+2.2: Not entirely unsure how these should be done, should i do: Seperate file, OOP, Template. or should i use something different.
 2.3: You can talk to them and up your relation with them, to get discounts and stuff
 
 3.: 4 Dungeons, 
-3.1: 5 floors for the first, 10 for the second, 15 for the third, 20 for the final one
+3.1: 5 floors for the first, 10 for the second, 15 for the third, 20 for the final one and there will be a random amount of rooms within a certain limit.
+Now, Dunegons are just gonna be a class, so OOP, again seems perfect for it, atleast to my extremely limited knowledge.
+Probably gonna use the template idea here too. 
+GamePlan: Seperate file, OOP, Template
+
 3.2: Each one will have its own loot pool, unsure about everything else, I feel like OOP would be perfect for this. 
-so im heavily leaning towards doing that for monsters.
+so im heavily leaning towards doing that for monsters, seperate file and everything.
 I also am thinking of monsters having same stats, equipment buffs, etc. but no level&exp, maybe something like rank instead.
+im thinking of a template that i can just call, make a monster and not think too much about. so maybe OOP is unneeded, though loot pools...
+i think just to play it safe.
+GamePlan: Seperate file, OOP, Template.
+
 3.3: Stronger monster, appears on the final floor of a dungeon.
-3.4: I have no idea.
+
+3.4: So turn based, basically like every rpg ever: Attack, Skills, Bag, Run
 
 Classes should probably be done before fights.
 
 4: Unlocked at level 5, Unlocks the skill tree for the class, 3 Classes, Mage, Rouge, Warrior, with 3 more advanced classes
-which are, Wizard, Assassin, Knight, each with new skill trees
+which are, Wizard, Assassin, Knight, each with new skill tree
+GamePlan: Seperate file, OOP, Template
+
 4.1: Each class will have a skill tree with 5-10 skills
+
 4.2 Earned from leveling up, you spend them on the skill tree to unlock skills
