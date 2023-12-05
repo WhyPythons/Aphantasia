@@ -9,6 +9,7 @@ def SlowText(text='', speed=0.06):
         time.sleep(speed)
         if len(ls) == len(text):
             print()
+            
 def CharacterCreation(race='', name=''):
     print("Welcome to [Aphantasia]")
     skipintro = input('Skip intro? (y/n):')
