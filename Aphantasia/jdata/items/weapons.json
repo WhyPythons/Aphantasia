@@ -1,0 +1,9 @@
+{
+    "name": "Iron Sword",
+    "description": "A simple sword made of iron. Made for killing.",
+    "rarity": "null",
+    "itemtype": "weapon",
+    "properties": {
+        "damage": 0
+    }
+}
