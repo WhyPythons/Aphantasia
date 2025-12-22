@@ -1,4 +1,4 @@
-# Anaphastia
+# Aphantasia
 A terminal game project. Made entirely in python, using only standard libraries. 
 
 In the beginning stages of development, this being the third iteration of my first ever game project. (A mess that should've never seen the light of day)
