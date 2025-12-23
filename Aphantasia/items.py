@@ -2,14 +2,13 @@ from enum import Enum
 import random, json
 
 class Rarity(Enum):
-    NULL = "null"
-    COMMON = "common"
-    UNCOMMON = "uncommon"
-    RARE = "rare"
-    EPIC = "epic"
-    LEGENDARY = "legendary"
-    MYTHIC = "mythic"
-    #Change to star based rating?
+    NULL = (0, "null")
+    COMMON = (5, "common")
+    UNCOMMON = (20, "uncommon")
+    RARE = (35, "rare")
+    EPIC = (50, "epic")
+    LEGENDARY = (80, "legendary")
+    MYTHIC = (100, "mythic")
     
 class ItemType(Enum):
     WEAPON = "weapon"

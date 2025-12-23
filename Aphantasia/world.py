@@ -12,8 +12,9 @@ class WorldLevel(Enum):
 class World:
     level: WorldLevel
     coins: int
+    units: dict
     inventory: dict
-    buildings: list
+    buildings: dict
 
 @dataclass
 class Building:

@@ -1,8 +1,7 @@
-import items, units, world
+import items, units, world, render
 
-
+                                                                                                                                                                                    
 def main():
-    wrld = world.World(world.WorldLevel.DESOLATE, 1000, {}, [])
-    units = {}
-
+    render.main_menu()
+    
 main()

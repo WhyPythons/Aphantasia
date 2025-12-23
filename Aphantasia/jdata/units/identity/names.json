@@ -1,1 +1,41 @@
-["Alice", "Bob", "Charlie", "Diana", "Jessica", "Arthur", "Randy", "Milenka", "Jay", "Herbet", "Robert", "Vinny", "Emily", "Emilia", "Vannessa", "Brook", "Fern"]
+{
+    "male_names": [
+        "Aelor", "Aaron", "Abel", "Adam", "Adalric", "Adrian", "Aidan", "Alaric", "Albert", "Alec",
+        "Alexander", "Andre", "Andrew", "Anthony", "Asher", "Asheron", "Ashton", "Austin", "Axel",
+        "Baelor", "Beren", "Benjamin", "Bennett", "Brody", "Bryce", "Cadeyrn", "Caden", "Calvyn",
+        "Callen", "Camber", "Cameron", "Carter", "Cedric", "Charles", "Chase", "Christian", "Christopher",
+        "Cole", "Colin", "Connor", "Cooper", "Corwin", "Cristian", "Daeric", "Daelin", "Darian", "Damarion",
+        "Davos", "Dresden", "Dorian", "Dylan", "Eamon", "Eldric", "Eldrin", "Emrys", "Ender", "Eryndor",
+        "Farlan", "Faelan", "Fendrel", "Finnian", "Galen", "Gareth", "Gavriel", "Gwyndor", "Hadrian",
+        "Hadriel", "Haleth", "Haldor", "Ithric", "Ivar", "Jareth", "Jason", "Jasper", "Jayden", "Jorlan",
+        "John", "Jonathan", "Jordan", "Joseph", "Joshua", "Jay", "Josiah", "Julian", "Justin", "Kael", "Kaelen",
+        "Kaelenor", "Kaelith", "Kieran", "Kingston", "Kyle", "Leo", "Leonardo", "Levi", "Liam", "Lareth",
+        "Lincoln", "Lucian", "Luis", "Magnus", "Malric", "Maelor", "Miles", "Nathan", "Nathaniel", "Nikolai",
+        "Noah", "Oliver", "Orrin", "Oberon", "Orin", "Othran", "Owen", "Peryn", "Peregrin", "Phineas",
+        "Phaedon", "Quendric", "Quintus", "Quorren", "Raelith", "Ragnar", "Rhydian", "Roderic", "Roman",
+        "Sylas", "Soren", "Tarian", "Tavian", "Thalion", "Thalric", "Theron", "Torin", "Uther", "Ulric",
+        "Ulthiel", "Vandrel", "Valerian", "Veylor", "Weylin", "Wulfric", "Xander", "Xylander", "Yorick",
+        "Zalric", "Zereth"
+    ],
+    "female_names": [
+        "Aeliana", "Aislinn", "Alana", "Alarice", "Althea", "Amara", "Amelia", "Ana", "Angel", "Angela",
+        "Angelina", "Anna", "Aria", "Ariana", "Arden", "Arwen", "Aubrey", "Audrey", "Autumn", "Aurelia",
+        "Bailey", "Belinda", "Briar", "Briallen", "Branwen", "Bridget", "Brooke", "Calista", "Calyra",
+        "Callie", "Camber", "Carla", "Carmen", "Caroline", "Cassandra", "Catherine", "Celestine", "Cerys",
+        "Chloe", "Claire", "Clara", "Cora", "Crystal", "Dahlia", "Damaris", "Daniela", "Daphne", "Delaney",
+        "Delara", "Destiny", "Eden", "Eira", "Eleanor", "Elara", "Elena", "Eliana", "Elizabeth", "Elle",
+        "Elowen", "Emily", "Emma", "Esme", "Faith", "Faye", "Fiona", "Galadriel", "Galadrielle", "Genesis",
+        "Gianna", "Grace", "Gwyneth", "Hailey", "Hannah", "Harper", "Hazel", "Helena", "Illyria", "Isara",
+        "Isolde", "Isabel", "Isabella", "Isla", "Jade", "Jasmine", "Jocelyn", "Julia", "Julianna", "Kaelith",
+        "Kallista", "Kaitlyn", "Katherine", "Kayla", "Khloe", "Laura", "Lauren", "Leah", "Lila", "Lillian",
+        "Lily", "Liora", "Lioraen", "Lucy", "Luna", "Lydia", "Maelis", "Madeline", "Madelyn", "Madison", "Milka",
+        "Maeve", "Malric", "Mara", "Marael", "Maria", "Maya", "Megan", "Melanie", "Meliora", "Mirella",
+        "Mila", "Neriah", "Nimue", "Nivara", "Nora", "Nova", "Nyssa", "Nevaeh", "Orelia", "Ravelle",
+        "Ravenna", "Ravyn", "Rhiannon", "Rose", "Sable", "Saphira", "Selene", "Selindra", "Seraphine",
+        "Seren", "Sirella", "Sylvara", "Tahlia", "Talindra", "Thea", "Thessaly", "Undine", "Valeria",
+        "Vanyra", "Vesper", "Veyra", "Xanthe", "Xyra", "Yllara", "Ysolde", "Yvanna", "Zara", "Zephira"
+    ],
+    "neutral_names": [
+        "Alex", "Casey", "Drew", "Jordan", "Morgan", "Parker", "Quinn", "Taylor"
+    ]
+}
