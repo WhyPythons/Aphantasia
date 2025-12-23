@@ -1,0 +1,14 @@
+{
+    "farming": {
+        "name": "Farming",
+        "description": "Unit's skill in planting, growing, and harvesting crops."
+    },
+    "blackmsithing": {
+        "name": "Blacksmithing",
+        "description": "Unit's skill in metal-working."
+    },
+    "Agility": {
+        "name": "Agility",
+        "description": "Unit's skill in speed related activites."
+    }
+}

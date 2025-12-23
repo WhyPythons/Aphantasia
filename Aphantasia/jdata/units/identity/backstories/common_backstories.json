@@ -1,0 +1,25 @@
+{
+    "farmer": {
+        "name": "Farmer",
+        "rarity": "Common",
+        "description": "A peasant from a rural area. They provided for their family by farming crops and selling them in the local market.",
+        "affiliation": "NONE",
+        "starting_skills": [
+            {
+                "id": "farming", "level": 1
+            }
+        ]
+    },
+
+    "blacksmith": {
+        "name": "Blacksmith",
+        "rarity": "Common",
+        "description": "A person who has dedicated themselves to the art of metalworking due to money, passion, or both.",
+        "affiliation": "NONE",
+        "starting_skills": [
+            {
+                "id": "blacksmithing", "level": 1
+            }
+        ]
+    }
+}
