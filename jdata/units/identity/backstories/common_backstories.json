@@ -1,0 +1,16 @@
+{
+    "backstory_peasant": {
+        "name": "Peasant",
+        "rarity": "COMMON",
+        "description": "Born into hard labor and simple living, peasants spend their lives working the land and enduring long days with little reward. Though lacking formal training or status, they develop resilience, practicality, and a grounded sense of survival.",
+        "affiliation": "NONE",
+        "backstory_skills": [],
+        "backstory_stat_modifiers": {
+            "strength": 2,
+            "toughness": 2,
+            "agility": 1,
+            "intelligence": 0
+        },
+        "possible_personalities": []
+    }
+}

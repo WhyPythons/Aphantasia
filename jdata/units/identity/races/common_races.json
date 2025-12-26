@@ -1,0 +1,14 @@
+{
+    "race_human": {
+        "name": "Human",
+        "rarity": "COMMON",
+        "description": "Humans are highly adaptable and driven by ambition. Lacking extreme physical traits, they compensate with versatility, learning quickly and thriving in nearly any environment.",
+        "racial_stat_ranges": {
+            "strength": [3, 10],
+            "toughness": [3, 10],
+            "agility": [3, 10],
+            "intelligence": [3, 10]
+        },
+        "racial_skills": []
+    }
+}

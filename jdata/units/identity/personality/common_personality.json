@@ -1,0 +1,26 @@
+{
+    "personality_coward": {
+        "name": "Coward",
+        "rarity": "COMMON",
+        "description": "Easily frightened",
+        "personality_stat_modifiers": {
+            "strength": -2,
+            "toughness": -2,
+            "agility": 2,
+            "intelligence": 1
+        },
+        "personality_skill": ""
+    },
+    "personality_brave": {
+        "name": "Brave",
+        "rarity": "COMMON",
+        "description": "Strong and doesn't break easily",
+        "personality_stat_modifiers": {
+            "strength": 2,
+            "toughness": 2,
+            "agility": 1,
+            "intelligence": 0
+        },
+        "personality_skill": ""        
+    }
+}

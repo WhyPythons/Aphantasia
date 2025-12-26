@@ -17,6 +17,7 @@
         "Ulthiel", "Vandrel", "Valerian", "Veylor", "Weylin", "Wulfric", "Xander", "Xylander", "Yorick",
         "Zalric", "Zereth"
     ],
+
     "female_names": [
         "Aeliana", "Aislinn", "Alana", "Alarice", "Althea", "Amara", "Amelia", "Ana", "Angel", "Angela",
         "Angelina", "Anna", "Aria", "Ariana", "Arden", "Arwen", "Aubrey", "Audrey", "Autumn", "Aurelia",
@@ -35,6 +36,7 @@
         "Seren", "Sirella", "Sylvara", "Tahlia", "Talindra", "Thea", "Thessaly", "Undine", "Valeria",
         "Vanyra", "Vesper", "Veyra", "Xanthe", "Xyra", "Yllara", "Ysolde", "Yvanna", "Zara", "Zephira"
     ],
+    
     "neutral_names": [
         "Alex", "Casey", "Drew", "Jordan", "Morgan", "Parker", "Quinn", "Taylor"
     ]

@@ -1,15 +1,20 @@
 from enum import Enum
 import random, json
 
+#Numbers act as weights
 class Rarity(Enum):
-    NULL = (0, "null")
-    COMMON = (5, "common")
-    UNCOMMON = (20, "uncommon")
-    RARE = (35, "rare")
-    EPIC = (50, "epic")
-    LEGENDARY = (80, "legendary")
-    MYTHIC = (100, "mythic")
+    NULL = ("null", 0)
+    COMMON = ("common", 55)
+    UNCOMMON = ("uncommon", 25)
+    RARE = ("race", 10)
+    EPIC = ("epic", 5)
+    LEGENDARY = ("legendary", 4)
+    MYTHIC = ("mythic", 1)
     
+    def __init__(self, name_str, number):
+        self.name_str = name_str
+        self.number = number
+
 class ItemType(Enum):
     WEAPON = "weapon"
     SHIELD = "shield"
