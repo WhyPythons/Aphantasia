@@ -1,4 +1,5 @@
 from enum import Enum
+from dataclasses import dataclass
 import random, json
 
 #Numbers act as weights
@@ -21,15 +22,15 @@ class ItemType(Enum):
     ARMOR = "armor"
     RESOURCE = "resource"
 
+@dataclass
 class Item:
-    def __init__(self, name: str, description: str, rarity: Rarity, itemtype: ItemType, properties: dict):
-        self.name = name
-        self.description = description
-        self.rarity = rarity
-        self.itemtype = itemtype
-        self.properties = properties
+    name: str
+    description: str
+    quality = Rarity
+    itemtype = ItemType
+    properties = dict
     
-    #Not quite sure how to go about this. This is just temporary.
+    
     def create_item():
 
         with open("jdata/weapons.json", "r") as f:

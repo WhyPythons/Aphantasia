@@ -1,0 +1,17 @@
+{
+    "building_plaza": {
+        "level": 0,
+        "name": "Plaza",
+        "description": "A gathering area for your units.",
+        "occupants": {},
+        "maxoccupants": 50      
+    },
+
+    "building_summoning_chamber": {
+        "level": 0,
+        "name": "Summoning Chamber",
+        "description": "Allows you to summon units.",
+        "occupants": {},
+        "maxoccupants": 0
+    }
+}

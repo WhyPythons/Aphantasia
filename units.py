@@ -82,6 +82,7 @@ class Meta:
     level: int
     exp: int
     stats: Stats
+    mood: int
     skills: dict[str, Skill]
     inventory: dict
 
@@ -118,12 +119,10 @@ class Unit:
                         list.append(storage[key][i])
                         weights.append(Rarity[storage[key][i]["rarity"]].number)
                 except KeyError:
-                    print("Error with assigning rarity (Lowercase 'common' or empty json) [Ignoring]")
+                    print("Error with assigning rarity (Lowercase 'rarity' or empty json) [Ignoring]")
                 except TypeError:
                     print("Something has gone horribly wrong here.")
-
-        final_race = random.choices(list, weights=weights, k=1)
-
+        
         return list[0]
     
     def compute_identity(storage, files):
@@ -166,7 +165,7 @@ class Unit:
         for e, d in enumerate(personality_stats.keys()):
             final_stat_total[e] += personality_stats[d]
 
-        return Meta(0, 1, 0, Stats(*final_stat_total), {}, {})
+        return Meta(0, 1, 0, Stats(*final_stat_total), 0, {}, {})
     
     @staticmethod
     def summon_unit():
@@ -192,7 +191,13 @@ class Unit:
         print("[Character Sheet]")
         print(f"Level: {self.meta.level}")
         print(f"EXP: {self.meta.exp}")
-        print("SUMMARY:")
+        print(f"Name: {self.identity.name}")
+        print(f"Age: {self.identity.age.value}")
+        print(f"Race: {self.identity.race["name"]}")
+        print(f"Backstory: {self.identity.backstory["name"]}")
+        print(f"{self.meta.stats}")
+        print()
+        print("DESCRIPTION:")
         print(f"{self.identity.name} is a {self.identity.age.value} {self.identity.sex.value} {self.identity.race["name"]}, previously a {self.identity.backstory["name"]}.")
         print(
             f"They have {self.appearance.skincolor} skin, {self.appearance.eyecolor} eyes, "

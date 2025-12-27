@@ -26,7 +26,7 @@ class Color(Enum):
     UNDERLINE = '\033[4;37;48m'
     END = '\033[1;37;0m'
 
-def main_menu():
+def main_menu(gameloop):
     print(r"""                _                    _               _        
                | |                  | |             (_)       
    __ _  _ __  | |__    __ _  _ __  | |_  __ _  ___  _   __ _ 
@@ -34,4 +34,19 @@ def main_menu():
  | (_| || |_) || | | || (_| || | | || |_| (_| |\__ \| || (_| |
   \__,_|| .__/ |_| |_| \__,_||_| |_| \__|\__,_||___/|_| \__,_|
         | |                                                   
-        |_|                                                   """)
+        |_|                                                   """
+    )
+    print()
+    print("1. [Play]")
+    print("2. [Saves]")
+    print("3. [Exit]")
+    while True:
+        usr = input()
+        if usr == "1":
+            gameloop = True
+            return gameloop
+        if usr == "2":
+            print("TODO")
+            break
+        if usr == "3":
+            break
