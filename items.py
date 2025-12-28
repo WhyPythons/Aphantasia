@@ -1,21 +1,8 @@
-from enum import Enum
 from dataclasses import dataclass
+from common import Rarity
+from enum import Enum
 import random, json
-
-#Numbers act as weights
-class Rarity(Enum):
-    NULL = ("null", 0)
-    COMMON = ("common", 55)
-    UNCOMMON = ("uncommon", 25)
-    RARE = ("race", 10)
-    EPIC = ("epic", 5)
-    LEGENDARY = ("legendary", 4)
-    MYTHIC = ("mythic", 1)
     
-    def __init__(self, name_str, number):
-        self.name_str = name_str
-        self.number = number
-
 class ItemType(Enum):
     WEAPON = "weapon"
     SHIELD = "shield"
@@ -26,11 +13,11 @@ class ItemType(Enum):
 class Item:
     name: str
     description: str
-    quality = Rarity
-    itemtype = ItemType
-    properties = dict
+    quality: Rarity
+    itemtype: ItemType
+    properties: dict
     
-    
+    #Temporary
     def create_item():
 
         with open("jdata/weapons.json", "r") as f:

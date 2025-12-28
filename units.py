@@ -1,10 +1,7 @@
 from dataclasses import dataclass
-from items import Rarity
 from enum import Enum
-from pathlib import Path
-import json, random
-
-#Traits?
+from common import Rarity, read_files
+import random
 
 class Sex(Enum):
     MALE = "male"
@@ -35,7 +32,7 @@ class Race:
     name: str 
     rarity: Rarity
     description: str
-    racial_stat_ranges: dict #strength: (0, 10), agility: (0, 100), etc
+    racial_stat_ranges: dict
     racial_skills: list[Skill]
 
 @dataclass
@@ -169,23 +166,16 @@ class Unit:
     
     @staticmethod
     def summon_unit():
-        folder = Path("jdata/units")
-        files = {f.stem: str(f) for f in folder.rglob("*") if f.is_file()}
 
-        storage = {}
-        for key, path in files.items():
-            with open(path, "r") as f:
-                content = f.read()
-                if not content:
-                    print(f"Empty Json: {key}. [Ignoring]")
-                    continue
-                storage[key] = json.loads(content)
+        storage, files = read_files("jdata/units")
 
         identity = Unit.compute_identity(storage, files)
         appearance = Unit.compute_appearance(storage)
         meta = Unit.compute_meta(identity.race, identity.backstory, identity.personality)
 
         return Unit(identity, appearance, meta)
+    
+        #Return unit and unit.name, maybe as a dict with name as a key
 
     def display_unit_info(self):
         print("[Character Sheet]")
