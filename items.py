@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from common import Rarity
 from enum import Enum
-import random, json
-    
+import json
+
 class ItemType(Enum):
     WEAPON = "weapon"
     SHIELD = "shield"

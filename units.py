@@ -75,11 +75,12 @@ class Appearance:
 
 @dataclass
 class Meta:
-    tier: int
+    tier: int #enum
     level: int
     exp: int
-    stats: Stats
     mood: int
+    assigned_building: str
+    stats: Stats
     skills: dict[str, Skill]
     inventory: dict
 
@@ -123,6 +124,7 @@ class Unit:
         return list[0]
     
     def compute_identity(storage, files):
+
         age = Unit.choose_age()
         sex = Unit.choose_sex()
         name = Unit.choose_name(storage, sex)
@@ -146,7 +148,14 @@ class Unit:
 
         return final_appearance
     
-    def compute_meta(race: dict, backstory, personality):
+    def compute_meta(tier, race: dict, backstory, personality):
+        tier = 1 #Choosebyrarity
+        level = random.randint(1, tier * 2)
+        exp = 0
+        mood = 0
+        assigned_building = ""
+        skills = print("todo")
+
         final_stat_total = []
 
         race_stats: dict = race["racial_stat_ranges"]
@@ -162,22 +171,22 @@ class Unit:
         for e, d in enumerate(personality_stats.keys()):
             final_stat_total[e] += personality_stats[d]
 
-        return Meta(0, 1, 0, Stats(*final_stat_total), 0, {}, {})
+        return Meta(tier, level, exp, mood, assigned_building, Stats(*final_stat_total), skills, {})
     
     @staticmethod
-    def summon_unit():
+    def summon_unit(tier: int):
 
-        storage, files = read_files("jdata/units")
+        storage, files = read_files("data/units")
 
         identity = Unit.compute_identity(storage, files)
         appearance = Unit.compute_appearance(storage)
-        meta = Unit.compute_meta(identity.race, identity.backstory, identity.personality)
+        meta = Unit.compute_meta(tier, identity.race, identity.backstory, identity.personality)
 
         return Unit(identity, appearance, meta)
     
-        #Return unit and unit.name, maybe as a dict with name as a key
 
     def display_unit_info(self):
+        print("-----------------------")
         print("[Character Sheet]")
         print(f"Level: {self.meta.level}")
         print(f"EXP: {self.meta.exp}")
@@ -195,3 +204,4 @@ class Unit:
             f"{self.identity.name} stands {self.appearance.height} with a {self.appearance.weight} build, "
             f"marked by {self.appearance.muscle} musculature and {self.appearance.ears}"
         )  
+        print("-----------------------")

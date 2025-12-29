@@ -3,15 +3,15 @@
         "level": 0,
         "name": "Plaza",
         "description": "A gathering area for your units.",
-        "occupants": {},
-        "maxoccupants": 50      
+        "occupants": 0,
+        "maxoccupants": 20      
     },
 
     "building_summoning_chamber": {
         "level": 0,
         "name": "Summoning Chamber",
-        "description": "Allows you to summon units.",
-        "occupants": {},
-        "maxoccupants": 0
+        "description": "Allows you to summon units at the cost of coins. (Gives access to 'summon' command)",
+        "occupants": 0,
+        "maxoccupants": 2
     }
 }
